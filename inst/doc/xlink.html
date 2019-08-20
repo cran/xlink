@@ -7,12 +7,13 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <meta name="author" content="Wei Xu, Meiling Hao, Yi Zhu" />
 
-<meta name="date" content="2019-07-02" />
+<meta name="date" content="2019-08-20" />
 
 <title>xlink</title>
 
@@ -70,7 +71,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
       if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
       var style = rule.style.cssText;
       // check if color or background-color is set
-      if (rule.style.color === '' || rule.style.backgroundColor === '') continue;
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
       // replace div.sourceCode by a pre.sourceCode rule
       sheets[i].deleteRule(j);
       sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
@@ -95,7 +96,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">xlink</h1>
 <h4 class="author">Wei Xu, Meiling Hao, Yi Zhu</h4>
-<h4 class="date">2019-07-02</h4>
+<h4 class="date">2019-08-20</h4>
 
 
 
@@ -106,6 +107,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h2>Reference:</h2>
 <blockquote>
 <p>“Xu, Wei, and Meiling Hao.”A unified partial likelihood approach for X‐chromosome association on time‐to‐event outcomes.&quot; Genetic epidemiology 42.1 (2018): 80-94.&quot; (<a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/gepi.22097">via</a>)</p>
+</blockquote>
+<blockquote>
+<p>“Han, D., Hao, M., Qu, L., &amp; Xu, W. (2019).”A novel model for the X-chromosome inactivation association on survival data.&quot; Statistical Methods in Medical Research.&quot; (<a href="https://www.ncbi.nlm.nih.gov/pubmed/31258049">via</a>)</p>
 </blockquote>
 </div>
 </div>
@@ -282,7 +286,7 @@ output&lt;-<span class="kw">xlink_fit</span>(<span class="dt">os=</span><span cl
 <td align="right">1.6392</td>
 <td align="left">[1.3895,1.9339]</td>
 <td align="right">0.0000000</td>
-<td align="left">0.20625</td>
+<td align="left">0.2062</td>
 </tr>
 <tr class="even">
 <td>gender</td>
@@ -354,7 +358,7 @@ output&lt;-<span class="kw">xlink_fit</span>(<span class="dt">os=</span><span cl
 <td align="right">1.8293</td>
 <td align="left">[1.4411,2.322]</td>
 <td align="right">0.0000007</td>
-<td align="left">0.20625</td>
+<td align="left">0.2062</td>
 </tr>
 <tr class="even">
 <td>gender</td>
@@ -419,7 +423,7 @@ output&lt;-<span class="kw">xlink_fit</span>(<span class="dt">os=</span><span cl
 <td align="right">1.6392</td>
 <td align="left">[1.3895,1.9339]</td>
 <td align="right">0.0000000</td>
-<td align="left">0.20625</td>
+<td align="left">0.2062</td>
 </tr>
 <tr class="even">
 <td>gender</td>
@@ -484,7 +488,7 @@ output&lt;-<span class="kw">xlink_fit</span>(<span class="dt">os=</span><span cl
 <td align="right">1.6596</td>
 <td align="left">[1.4031,1.9629]</td>
 <td align="right">0.0000000</td>
-<td align="left">0.20625</td>
+<td align="left">0.2062</td>
 </tr>
 <tr class="even">
 <td>gender</td>
@@ -584,7 +588,7 @@ result&lt;-<span class="kw">xlink_fit</span>(<span class="dt">os=</span><span cl
 <td align="right">1.6392</td>
 <td align="left">[1.3895,1.9339]</td>
 <td align="right">0</td>
-<td align="left">0.20625</td>
+<td align="left">0.2062</td>
 <td align="left">XCI</td>
 <td align="right">NA</td>
 </tr>
@@ -593,7 +597,7 @@ result&lt;-<span class="kw">xlink_fit</span>(<span class="dt">os=</span><span cl
 <td align="right">1.5596</td>
 <td align="left">[1.3661,1.7805]</td>
 <td align="right">0</td>
-<td align="left">0.36375</td>
+<td align="left">0.3638</td>
 <td align="left">XCI-S</td>
 <td align="right">1.538163</td>
 </tr>
@@ -602,6 +606,9 @@ result&lt;-<span class="kw">xlink_fit</span>(<span class="dt">os=</span><span cl
 </div>
 </div>
 
+
+
+<!-- code folding -->
 
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
